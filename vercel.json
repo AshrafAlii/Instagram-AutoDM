@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/auth/(.*)", "dest": "backend/server.js" },
+    { "src": "/webhook/(.*)", "dest": "backend/server.js" },
+    { "src": "/webhook", "dest": "backend/server.js" },
+    { "src": "/automation/(.*)", "dest": "backend/server.js" },
+    { "src": "/logs/(.*)", "dest": "backend/server.js" },
+    { "src": "/logs", "dest": "backend/server.js" },
+    { "src": "/health", "dest": "backend/server.js" },
+    { "src": "/(.*)", "dest": "frontend/dist/index.html" }
+  ],
+  "env": {
+    "META_APP_ID": "@meta_app_id",
+    "META_APP_SECRET": "@meta_app_secret",
+    "WEBHOOK_VERIFY_TOKEN": "@webhook_verify_token",
+    "APP_URL": "@app_url",
+    "FRONTEND_URL": "@frontend_url"
+  }
+}
