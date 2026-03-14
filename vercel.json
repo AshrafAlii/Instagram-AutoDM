@@ -22,12 +22,6 @@
     { "src": "/logs", "dest": "backend/server.js" },
     { "src": "/health", "dest": "backend/server.js" },
     { "src": "/(.*)", "dest": "frontend/dist/index.html" }
-  ],
-  "env": {
-    "META_APP_ID": "@meta_app_id",
-    "META_APP_SECRET": "@meta_app_secret",
-    "WEBHOOK_VERIFY_TOKEN": "@webhook_verify_token",
-    "APP_URL": "@app_url",
-    "FRONTEND_URL": "@frontend_url"
-  }
+    
+  ]
 }
