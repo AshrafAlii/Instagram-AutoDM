@@ -271,5 +271,4 @@ const styles = {
     marginTop: '2px',
   },
   setupTitle: { fontSize: '14px', fontWeight: '700', marginBottom: '4px' },
-  setupDesc: { fontSize: '13px', color: 'var(--text-2)', lineHeight: 1.5, fontFamily: 'var(--font-mono)', fontSize: '12px' },
-};
+setupDesc: { color: 'var(--text-2)', lineHeight: 1.5, fontFamily: 'var(--font-mono)', fontSize: '12px' },};
