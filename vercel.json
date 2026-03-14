@@ -22,5 +22,6 @@
     { "src": "/logs", "dest": "backend/server.js" },
     { "src": "/health", "dest": "backend/server.js" },
     { "src": "/(.*)", "dest": "frontend/dist/index.html" }
+    
   ]
 }
